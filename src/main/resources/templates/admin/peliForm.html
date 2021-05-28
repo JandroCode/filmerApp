@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>Formulario de películas</h1>
+	
+	
+	<div th:if="${peliGuardada!=null}" th:text="${peliGuardada}"></div>
+	
+	<form th:action="@{/admin/save-peli}" th:object="${pelicula}" method="POST" enctype="multipart/form-data">
+		<input type="text" placeholder="Título" th:field="*{titulo}"  />
+		<input type="date" th:field="*{fechaEstreno}" />
+		<input type="file" name="file" />
+		<button type="submit">Guardar película</button>
+	
+	</form>
+
+</body>
+</html>
