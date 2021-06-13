@@ -3,6 +3,8 @@ package com.filmer.service;
 import com.filmer.entities.Actor;
 
 public interface IActorService {
-	public void guardarActor(Actor actor);
+	void saveActor(Actor actor);
+	Actor obtenerActor(Long id);
+	void eliminarActor(Long id);
 
 }
