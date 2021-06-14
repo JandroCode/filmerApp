@@ -43,8 +43,8 @@
 					</div>
 					
 					
-					<div th:each="i : ${comentario.usuario}">
-						<span th:if="${i.username == username}">
+					<div th:each="i : ${comentario.usuario}" class="mb-5">
+						<span  th:if="${i.username == username}">
 							<a th:href="@{/comentarios/editar-comentario/} + ${comentario.id}" style="text-decoration:none">
 								<button class="btn btn-success"><i class="fas fa-pencil-alt"></i></button>
 							</a>
